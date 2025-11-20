@@ -33,5 +33,9 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Rotate(Vector3.up * -rotationSpeed * Time.deltaTime);
         }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            
+        }
     }
 }

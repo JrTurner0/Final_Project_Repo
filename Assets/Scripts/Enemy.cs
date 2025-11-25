@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -20,5 +21,13 @@ public class Enemy : MonoBehaviour
 
 
         enemyRb.AddForce(lookDirection * speed);
+    }
+    private void OnTriggerEnter (Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
     }
 }

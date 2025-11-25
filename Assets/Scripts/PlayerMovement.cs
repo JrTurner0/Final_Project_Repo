@@ -5,9 +5,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed = 7f;
     public float rotationSpeed = 100f;
-
-    
-    
+    public GameObject projectilePrefab;
+    public float horizontalInput;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,10 +31,5 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(Vector3.up * -rotationSpeed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            
-        }
-    }
+        }  }
 }
